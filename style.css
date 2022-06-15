@@ -1,5 +1,5 @@
 *{
-    border: 1px solid red ;
+    /*border: 1px solid red ; */
 }
 progress::-webkit-progress-value {
     background-color: hsl(176, 50%, 47%);
@@ -7,13 +7,50 @@ progress::-webkit-progress-value {
 .container1{
     background: url('images/image-hero-desktop.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     background-position:center center;
     height: 50vh;
 }
 .navbar-brand{
     font-weight: 700;
 }
+.radio__radio{
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #d8e4e2;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
 
+}
+.radio__radio::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background:hsl(176, 50%, 47%) ;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+.form-check-input:checked + .radio__radio::after{
+    transform: scale(1);
+}
+
+
+.form-check-label1{
+    display: inline-flex;
+    align-items: center;
+}
+.form-check-label{
+    display: inline-flex;
+    align-items: center;
+    /*padding: 10px;*/
+}
+.second{
+    margin-left: 10px;
+}
 .container2{
     width: 50%;
     margin: 0 auto;
@@ -43,10 +80,13 @@ progress::-webkit-progress-value {
 }
 .backers{
     width: 100%;
+    padding-bottom: 1rem;
 
 }
 .backed{
     width: 100%;
+    padding-bottom: 1rem;
+
 }
 .days{
     width: 100%;
@@ -58,9 +98,12 @@ progress::-webkit-progress-value {
 
 
 .box{
-    border-left:1px solid black;
-    /* padding-left: 10px; */
+    border-left:1px solid gray;
+   
 }
+/*.right{
+    padding-right: 20px;
+}*/
 .level{
     height: 10px;
   background: whitesmoke;
@@ -104,6 +147,7 @@ width: 0;
 }
 .thanks{
     max-width: 500px;
+    min-width: 300px;
 }
 .close{
     display: flex;
@@ -112,6 +156,7 @@ width: 0;
 .cash{
     color: hsl(176, 50%, 47%);
 }
+
 
 
 .price{
@@ -163,7 +208,12 @@ outline: none;
 }
 .menu-content{
     width: 100%;
-    
+}
+
+.test{
+    width: 40%;
+    display: none;
+    margin: 0 auto;
 }
 .con-cool{
     margin: 0 auto;
@@ -185,7 +235,12 @@ outline: none;
         width: 90%;
     }
    
-    
+    .test{
+        display: block;
+    }
+    .box{
+       border: none;
+    }
     
  
 }
@@ -196,12 +251,15 @@ outline: none;
     .book{
         display: none;
     }
+  
+    .test{
+        display: block;
+    
+    }
     .box{
         border: none;
-        border-bottom: 1px solid black;
-        width: 30%;
-        margin:0 auto;
     }
+  
     .HamBurger{
         display: block;
     }
@@ -209,6 +267,25 @@ outline: none;
         display:none;
     }
   .product{
-      width:100%;
+      width:80%;
   }
+      
+   .opt-4 .product{
+    width: 100%;
+   }   
+
+
+.continue,.continue2,.continue3{
+    flex-direction: column;
+    border-top: 1px solid rgb(199, 199, 199);
 }
+.enter{
+    margin: 1rem 0;
+}
+.price{
+    margin: 1rem 0;
+
+}
+  
+}
+/*@media screen and (max-width:400)*/

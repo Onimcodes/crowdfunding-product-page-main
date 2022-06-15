@@ -13,19 +13,42 @@ const bamboo = document.querySelector('#bamboo-stand')
 const Black = document.querySelector('#Black-edition')
  
  Mahogany.addEventListener('change', (e) => {
-  const card1 =  e.target.parentElement.parentElement
+  const card1 =  e.target.parentElement.parentElement.parentElement
   card1.classList.toggle('glow')
-  confirmOption3.classList.remove('d-none')
+  if(confirmOption3.classList.contains('d-none')){
+    confirmOption3.classList.remove('d-none')
+    confirmOption1.classList.add('d-none')
+    confirmOption2.classList.add('d-none')
+
+  }
  })
  Black.addEventListener('change', (e)=> {
-    const card2 =  e.target.parentElement.parentElement
+    const card2 =  e.target.parentElement.parentElement.parentElement
     card2.classList.toggle('glow')
-    confirmOption2.classList.remove('d-none')
+    if(confirmOption2.classList.contains('d-none')){
+       
+        confirmOption2.classList.remove('d-none')
+        confirmOption1.classList.add('d-none')
+        confirmOption3.classList.add('d-none')
+
+    }
+    else{
+        return
+    }
+
  })
  bamboo.addEventListener('change', (e)=>{
-    const card3 =  e.target.parentElement.parentElement
+    const card3 =  e.target.parentElement.parentElement.parentElement
     card3.classList.toggle('glow')
-    confirmOption1.classList.remove('d-none')
+    if(confirmOption1.classList.contains('d-none')){
+        confirmOption1.classList.remove('d-none')
+        confirmOption2.classList.add('d-none')
+        confirmOption3.classList.add('d-none')
+
+    }
+    else{
+        return
+    }
  })
  btn1.addEventListener('click', (e)=> {
     full.style.width = btn1.getAttribute('data-done') + '%'
